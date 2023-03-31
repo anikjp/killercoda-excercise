@@ -1,0 +1,23 @@
+{
+    "title": "Node Affinity",
+    "description": "Learn to work with Node Affinity",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+      },
+      "steps": [
+        {
+          "title": "Create a PersistentVolume",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }
+  

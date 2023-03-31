@@ -1,0 +1,6 @@
+- Inspect the existing nodes and their assigned labels.
+- Pick one available node and label it with the key-value pair color=green. Pick a second node and label it with the key-value pair color=red.
+- Define a Pod with the image nginx in the YAML manifest file pod.yaml. Use the nodeSelector assignment to schedule the Pod on the node with the label color=green.
+- Create the Pod and ensure that the correct node has been used to run the Pod.
+- Change the Pod definition to schedule it on nodes with the label color=green or color=red.
+- Verify that the Pod runs on the correct node.

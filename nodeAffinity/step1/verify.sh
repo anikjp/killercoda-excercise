@@ -1,12 +1,10 @@
 #!/bin/bash
 
-kubectl get persistentvolume cool-volume
+kubectl get pods 
 
-SIZE=$(kubectl get persistentvolume cool-volume -o json | jq -r .spec.capacity.storage)
-HOSTPATH=$(kubectl get persistentvolume cool-volume -o json | jq -r .spec.hostPath.path)
-CLASS=$(kubectl get persistentvolume cool-volume -o json | jq -r .spec.storageClassName)
+RESULT=$(kubectl get pods app -ojson | jq -r .spec.nodeName)
 
-if [[ $SIZE = "100Mi" && $HOSTPATH = "/tmp/my-cool-vol" && $CLASS = "manual" ]]; then
+if [[ $RESULT = "node01" ]]; then
     exit 0
 else
     exit 1
